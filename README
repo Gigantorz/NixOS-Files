@@ -1,0 +1,42 @@
+To run NIXOS 
+
+1. Make sure you have configuration.nix in etc/nixos/configuration.nix
+
+2, Write all the packages you want included in `environment.systemPackages = with pkgs {}
+
+3, Save it as adminstration
+
+4. rebuild it using sudo nixos-rebuild switch
+
+---
+Zero Tier one launch:
+To run do
+sudo zerotier-one -d
+
+to join zerotier one vpn do:
+sudo zerotier-cli join fada62b015b7fe63
+
+---
+To delete old NixOs Generations
+
+nix-env --list-generations
+
+nix-collect-garbage --delete-old
+
+sudo nix-collect-garbage -d
+
+sudo /run/current-system/bin/switch-to-configuration boot
+
+---
+Installed files
+
+nix-env -q
+git-2.42.0
+moonlight-qt-5.0.1
+obsidian-1.4.16
+python3-3.13.0a2
+python3.11-pip-23.2.1
+remmina-1.4.33
+times-newer-roman-unstable-2018-09-11
+virtualenv-20.24.5
+zerotierone-1.12.2
